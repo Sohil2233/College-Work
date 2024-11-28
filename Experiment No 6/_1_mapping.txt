@@ -1,0 +1,19 @@
+pragma solidity ^0.8;
+contract Mapping{
+    mapping(uint=>string) student_no;
+
+    function setid()public{
+        student_no[3061]="Rahul";
+        student_no[3062]="Ashutosh";
+        student_no[3063]="Samadhan";
+        student_no[3064]="Sohil";
+    }
+
+    function set_info(uint no,string memory val)public{
+        student_no[no]=val;
+    }
+
+    function getinfo(uint no)public view returns (string memory){
+        return student_no[no];
+    }
+}

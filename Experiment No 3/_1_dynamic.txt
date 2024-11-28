@@ -1,0 +1,19 @@
+pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+
+contract FlexibleArray {
+    uint[] public dynamicArray;
+
+    function addElement(uint _element) public {
+        dynamicArray.push(_element);
+    }
+
+    function retrieveArray() public view returns (uint[] memory) {
+        return dynamicArray;
+    }
+
+    function arrayLength() public view returns (uint) {
+        return dynamicArray.length;
+    }
+}
+

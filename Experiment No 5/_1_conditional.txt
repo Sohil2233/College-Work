@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8;
+
+contract Licence
+{
+
+    function Eligiblity(uint8 _age) public pure returns (string memory)
+    { 
+        if(_age<18 || _age>75)
+        {
+            return "You are not Eligible For Driving Licence";
+        }
+        else 
+        {
+            return "You are Eligible for Driving Licence";
+        }
+        
+    }
+}

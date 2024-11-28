@@ -1,0 +1,9 @@
+contract StateVariables {
+ // State variables
+ uint someData;
+ uint luckyNumber = 42;
+
+ constructor(uint _num) public {
+ someData = _num;
+ }
+}

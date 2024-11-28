@@ -1,0 +1,35 @@
+pragma solidity 0.6.6;
+
+contract StudentCPI {
+    uint public OS;
+    uint public OS_Cr;
+    uint public DSA;
+    uint public DSA_Cr;
+    uint public PYTHON;
+    uint public PY_Cr;
+    uint public COA;
+    uint public COA_Cr;
+    uint public Solidity;
+    uint public Sol_cr;
+
+    function setCredit(uint _subject1, uint _subject2, uint _subject3, uint _subject4, uint _subject5) public {
+        OS_Cr = _subject1;
+        DSA_Cr = _subject2;
+        PY_Cr = _subject3;
+        COA_Cr = _subject4;
+        Sol_cr = _subject5;
+    }
+    function setMarks(uint _subject1, uint _subject2, uint _subject3, uint _subject4, uint _subject5) public {
+        OS = _subject1;
+        DSA = _subject2;
+        PYTHON = _subject3;
+        COA = _subject4;
+        Solidity = _subject5;
+    }
+
+    function calculateCPI() public view returns (uint) {
+        uint total_credits = OS_Cr + DSA_Cr + PY_Cr + COA_Cr + Sol_cr;
+        uint totalMarks = OS*OS_Cr + DSA*DSA_Cr + PYTHON*PY_Cr + COA*COA_Cr + Solidity*Sol_cr;
+        return (totalMarks / total_credits)/5; 
+    }
+}

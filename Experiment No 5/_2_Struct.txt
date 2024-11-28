@@ -1,0 +1,19 @@
+pragma solidity ^0.8;
+
+contract College {
+   
+    struct Student {
+        string name;
+        uint rollNumber;
+        string course;
+        
+    }
+    Student[] public studentList;
+
+    function addStudent(string memory _name, uint _rollNumber, string memory _course) public {
+        studentList.push(Student({name: _name,rollNumber: _rollNumber,course: _course}));
+    }
+     function showStudents() public view returns (Student[] memory) {
+        return studentList;
+    }
+}

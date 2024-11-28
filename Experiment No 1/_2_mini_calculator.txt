@@ -1,0 +1,31 @@
+pragma solidity 0.6.6;
+
+contract MiniCalculator {
+    uint firstNo;
+    uint secondNo;
+
+    function firstNoSet(uint x) public {
+        firstNo = x;
+    }
+
+    function secondNoSet(uint y) public {
+        secondNo = y;
+    }
+
+    function add() view public returns (uint) {
+        return firstNo + secondNo;
+    }
+
+    function subtract() view public returns (uint) {
+        return firstNo - secondNo;
+    }
+
+    function multiply() view public returns (uint) {
+        return firstNo * secondNo;
+    }
+
+    function divide() view public returns (uint) {
+        require(secondNo != 0, "Division by zero error");
+        return firstNo / secondNo;
+    }
+}

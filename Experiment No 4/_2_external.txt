@@ -1,0 +1,18 @@
+pragma solidity ^0.8;
+
+contract EXTERNAL {
+    function externalFunction() public pure returns (string memory) {
+        return "try everything to learn more";
+    }
+
+    function callingExternal() public view returns (string memory) {
+        return externalFunction(); 
+    }
+}
+
+contract Next {
+    EXTERNAL ext = new EXTERNAL(); 
+    string public s= ext.externalFunction();
+
+    
+}

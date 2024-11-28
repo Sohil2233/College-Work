@@ -1,0 +1,23 @@
+pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+
+contract BoundedArray {
+    uint[] public elements; 
+    uint public maxCapacity; 
+
+    constructor() public {
+        maxCapacity = 5;
+    }
+
+    function addElement(uint _element) public {
+        require(elements.length < maxCapacity, "Array is full");
+        elements.push(_element);
+    }
+    function retrieveArray() public view returns (uint[] memory) {
+        return elements;
+    }
+
+     
+
+    
+}

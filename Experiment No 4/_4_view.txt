@@ -1,0 +1,9 @@
+pragma solidity ^0.8.0;
+
+contract VIEW{
+    uint number=2222;
+    function View()public view returns(uint)
+    {
+        return number+666;
+    }
+}

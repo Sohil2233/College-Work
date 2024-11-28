@@ -1,0 +1,16 @@
+pragma solidity ^0.8;
+contract INTERNAL {
+    
+    function Internal ()internal pure returns (string memory){
+        return "Try you best ";
+    }
+    function calling()public pure returns (string memory){
+        return Internal ();
+    }
+}
+contract Another is INTERNAL{
+    function useInternalFunction() public pure returns (string memory) {
+        return Internal();
+    }
+
+}
