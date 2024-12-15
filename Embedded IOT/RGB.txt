@@ -1,0 +1,28 @@
+// Define pin numbers
+int redPin = 9;  // Replace AB with the actual pin number
+int greenPin = 10; // Replace A1 with the actual pin number
+int bluePin = 11;  // Replace A2 with the actual pin number
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  setColour(235, 52, 52);  // Set red color
+  delay(1000);
+
+  setColour(52, 235, 52);  // Set green color
+  delay(1000);
+
+  setColour(52, 52, 235);  // Set blue color
+  delay(1000);
+}
+
+void setColour(int red, int green, int blue) {
+  analogWrite(redPin, red);
+  analogWrite(greenPin, green);
+  analogWrite(bluePin, blue);
+}

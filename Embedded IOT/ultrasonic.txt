@@ -1,0 +1,56 @@
+#define echoPin 10
+#define trigPin 9
+#define buzzPin 11
+#define ledPin 12
+int playTime = 1;
+long duration;
+int distance;
+int frequency = 0;
+void setup() {
+pinMode(trigPin, OUTPUT); // Set the trigPin as an OUTPUT
+pinMode(echoPin, INPUT); // Set the echoPin as an INPUT
+pinMode(buzzPin, OUTPUT);
+pinMode(ledPin, OUTPUT);
+Serial.begin(9600);
+}
+void loop() {
+// Clears the trigPin state
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+// Sets the trigPin HIGH for 10 microseconds
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+// Reads the echoPin to get the time in microseconds
+duration = pulseIn(echoPin, HIGH);
+// Calculate distance
+distance = (duration * 0.034) / 2;
+Serial.print("Distance: ");
+Serial.print(distance);
+Serial.println(" cm");
+if (distance <= 10 && distance >= 2) {
+if (distance <= 3) {
+frequency = 1500;
+playTime = 200;
+}
+else if (distance <= 6) {
+frequency = 1200;
+playTime = 400;
+}
+else if (distance <= 10) {
+frequency = 1000;
+playTime = 700;
+}
+tone(buzzPin, frequency, playTime);
+blinkLED();
+}
+else {
+noTone(buzzPin);
+}
+}
+void blinkLED() {
+digitalWrite(ledPin, HIGH);
+delay(playTime);
+digitalWrite(ledPin, LOW);
+delay(playTime);
+}
