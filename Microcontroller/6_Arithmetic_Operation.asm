@@ -1,12 +1,11 @@
 ;ADDITION
 ORG 0H       ; Start at memory location 0H
-
 START:
 
     MOV R2, #00H     ; Initialize R2 to 0 (for storing carry)
 
-    MOV A, 20H       ; Load the value at address 20H into accumulator A
-    ADD A, 21H       ; Add the value at address 21H to accumulator A
+    MOV A, #20H       ; Load the value at address 20H into accumulator A
+    ADD A, #21H       ; Add the value at address 21H to accumulator A
 
     JNC SKIP         ; If there is no carry, jump to SKIP
     INC R2           ; If there is a carry, increment R2

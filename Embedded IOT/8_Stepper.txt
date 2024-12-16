@@ -1,0 +1,26 @@
+#include <Stepper.h>
+
+const int stepsPerRevolution = 2048; // for 28BYJ-48
+
+// Initialize the stepper library with the steps per revolution and
+pins
+Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
+
+void setup() {
+    // Set the speed at 10 RPM
+    myStepper.setSpeed(10);
+    // Begin Serial communication for debugging
+    Serial.begin(9600);
+}
+
+void loop() {
+    // Step one revolution in one direction
+    Serial.println("Clockwise rotation");
+    myStepper.step(stepsPerRevolution);
+    delay(1000);
+
+    // Step one revolution in the other direction
+    Serial.println("Counterclockwise rotation");
+    myStepper.step(-stepsPerRevolution);
+    delay(1000);
+}

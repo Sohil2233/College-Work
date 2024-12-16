@@ -1,0 +1,14 @@
+int EN = A0; // Define pin EN and assign it to pin A0
+
+void setup() {
+  // Put your setup code here, to run once:
+  pinMode(EN, OUTPUT); // Set EN as an OUTPUT
+}
+
+void loop() {
+  // Put your main code here, to run repeatedly:
+  analogWrite(EN, 255); // Write a PWM signal (max value for 8-bit PWM is 255)
+  delay(10000);         // Wait for 10 seconds
+  analogWrite(EN, 0);   // Turn off PWM signal
+  delay(1000);          // Wait for 1 second
+}
