@@ -1,0 +1,296 @@
+
+C:\Users\tambo>ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::8236:68dd:c542:51eb%20
+   IPv4 Address. . . . . . . . . . . : 192.168.15.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::af31:2fb5:ebe9:1af5%4
+   IPv4 Address. . . . . . . . . . . : 192.168.6.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::eebb:16a8:17b8:4f7d%7
+   IPv4 Address. . . . . . . . . . . : 192.168.1.127
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.1.1
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::c595:8b59:c405:68ec%6
+   IPv4 Address. . . . . . . . . . . : 192.168.137.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\tambo>tracert
+
+Usage: tracert [-d] [-h maximum_hops] [-j host-list] [-w timeout]
+               [-R] [-S srcaddr] [-4] [-6] target_name
+
+Options:
+    -d                 Do not resolve addresses to hostnames.
+    -h maximum_hops    Maximum number of hops to search for target.
+    -j host-list       Loose source route along host-list (IPv4-only).
+    -w timeout         Wait timeout milliseconds for each reply.
+    -R                 Trace round-trip path (IPv6-only).
+    -S srcaddr         Source address to use (IPv6-only).
+    -4                 Force using IPv4.
+    -6                 Force using IPv6.
+
+C:\Users\tambo>tracert adcet.ac.in
+
+Tracing route to adcet.ac.in [68.183.86.240]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  ^C
+C:\Users\tambo>ping adcet.ac.in
+
+Pinging adcet.ac.in [68.183.86.240] with 32 bytes of data:
+Reply from 68.183.86.240: bytes=32 time=74ms TTL=54
+Reply from 68.183.86.240: bytes=32 time=89ms TTL=54
+Reply from 68.183.86.240: bytes=32 time=79ms TTL=54
+Reply from 68.183.86.240: bytes=32 time=66ms TTL=54
+
+Ping statistics for 68.183.86.240:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 66ms, Maximum = 89ms, Average = 77ms
+
+C:\Users\tambo>arp
+
+Displays and modifies the IP-to-Physical address translation tables used by
+address resolution protocol (ARP).
+
+ARP -s inet_addr eth_addr [if_addr]
+ARP -d inet_addr [if_addr]
+ARP -a [inet_addr] [-N if_addr] [-v]
+
+  -a            Displays current ARP entries by interrogating the current
+                protocol data.  If inet_addr is specified, the IP and Physical
+                addresses for only the specified computer are displayed.  If
+                more than one network interface uses ARP, entries for each ARP
+                table are displayed.
+  -g            Same as -a.
+  -v            Displays current ARP entries in verbose mode.  All invalid
+                entries and entries on the loop-back interface will be shown.
+  inet_addr     Specifies an internet address.
+  -N if_addr    Displays the ARP entries for the network interface specified
+                by if_addr.
+  -d            Deletes the host specified by inet_addr. inet_addr may be
+                wildcarded with * to delete all hosts.
+  -s            Adds the host and associates the Internet address inet_addr
+                with the Physical address eth_addr.  The Physical address is
+                given as 6 hexadecimal bytes separated by hyphens. The entry
+                is permanent.
+  eth_addr      Specifies a physical address.
+  if_addr       If present, this specifies the Internet address of the
+                interface whose address translation table should be modified.
+                If not present, the first applicable interface will be used.
+Example:
+  > arp -s 157.55.85.212   00-aa-00-62-c6-09  .... Adds a static entry.
+  > arp -a                                    .... Displays the arp table.
+
+C:\Users\tambo>arp -a
+
+
+C:\Users\tambo>netstat -r
+===========================================================================
+
+C:\Users\tambo>nslookup adcet.ac.in
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    adcet.ac.in
+Address:  68.183.86.240
+
+
+C:\Users\tambo>hostname
+Soul
+
+C:\Users\tambo>nbstat -n
+'nbstat' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\tambo>nbtstat -n
+
+Local Area Connection* 1:
+Node IpAddress: [0.0.0.0] Scope Id: []
+
+    No names in cache
+
+VMware Network Adapter VMnet1:
+Node IpAddress: [192.168.15.1] Scope Id: []
+
+                NetBIOS Local Name Table
+
+       Name               Type         Status
+    ---------------------------------------------
+    SOUL           <00>  UNIQUE      Registered
+    WORKGROUP      <00>  GROUP       Registered
+    SOUL           <20>  UNIQUE      Registered
+
+Ethernet:
+Node IpAddress: [0.0.0.0] Scope Id: []
+
+    No names in cache
+
+Wi-Fi:
+Node IpAddress: [192.168.1.127] Scope Id: []
+
+                NetBIOS Local Name Table
+
+       Name               Type         Status
+    ---------------------------------------------
+    SOUL           <00>  UNIQUE      Registered
+    WORKGROUP      <00>  GROUP       Registered
+    SOUL           <20>  UNIQUE      Registered
+
+VMware Network Adapter VMnet8:
+Node IpAddress: [192.168.6.1] Scope Id: []
+
+                NetBIOS Local Name Table
+
+       Name               Type         Status
+    ---------------------------------------------
+    SOUL           <00>  UNIQUE      Registered
+    WORKGROUP      <00>  GROUP       Registered
+    SOUL           <20>  UNIQUE      Registered
+
+Local Area Connection* 2:
+Node IpAddress: [192.168.137.1] Scope Id: []
+
+                NetBIOS Local Name Table
+
+       Name               Type         Status
+    ---------------------------------------------
+    SOUL           <00>  UNIQUE      Registered
+    WORKGROUP      <00>  GROUP       Registered
+    SOUL           <20>  UNIQUE      Registered
+
+Bluetooth Network Connection:
+Node IpAddress: [0.0.0.0] Scope Id: []
+
+    No names in cache
+
+C:\Users\tambo>nbtstat -a <hostname>
+The syntax of the command is incorrect.
+
+C:\Users\tambo>nbtstat -S
+
+C:\Users\tambo>getmac
+
+Physical Address    Transport Name
+=================== ==========================================================
+E0-73-E7-30-B9-F2   Media disconnected
+A4-F9-33-2C-67-3A   \Device\Tcpip_{250A1529-1A52-4708-849E-80D4DA8ECEAA}
+A4-F9-33-2C-67-3E   Media disconnected
+A6-F9-33-2C-67-3A   \Device\Tcpip_{1F87086F-A632-435B-A80D-5775BEE357F2}
+00-50-56-C0-00-01   \Device\Tcpip_{E1E17EB9-1FBB-4716-935D-9058DD59D53B}
+00-50-56-C0-00-08   \Device\Tcpip_{0CD9272F-5BBE-4A83-B5AD-E5C3E7426A64}
+
+C:\Users\tambo>systeminfo
+
+Host Name:                 SOUL
+OS Name:                   Microsoft Windows 11 Home Single Language
+OS Version:                10.0.22631 N/A Build 22631
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          tambolisohil04@gmail.com
+Registered Organization:   HP
+Product ID:                00356-24661-71680-AAOEM
+Original Install Date:     4/14/2023, 7:28:00 PM
+System Boot Time:          6/24/2024, 11:31:43 AM
+System Manufacturer:       HP
+System Model:              Victus by HP Gaming Laptop 15-fa0xxx
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 154 Stepping 3 GenuineIntel ~2000 Mhz
+BIOS Version:              AMI F.24, 10/26/2023
+Windows Directory:         C:\windows
+System Directory:          C:\windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              00004009
+Time Zone:                 (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
+Total Physical Memory:     7,860 MB
+Available Physical Memory: 1,104 MB
+Virtual Memory: Max Size:  32,436 MB
+Virtual Memory: Available: 10,566 MB
+Virtual Memory: In Use:    21,870 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              \\SOUL
+Hotfix(s):                 7 Hotfix(s) Installed.
+                           [01]: KB5037591
+                           [02]: KB5012170
+                           [03]: KB5026039
+                           [04]: KB5027397
+                           [05]: KB5039302
+                           [06]: KB5037959
+                           [07]: KB5039338
+Network Card(s):           6 NIC(s) Installed.
+                           [01]: Realtek Gaming GbE Family Controller
+                                 Connection Name: Ethernet
+                                 Status:          Media disconnected
+                           [02]: Intel(R) Wi-Fi 6E AX211 160MHz
+                                 Connection Name: Wi-Fi
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.1
+                                 IP address(es)
+                                 [01]: 192.168.1.127
+                                 [02]: fe80::eebb:16a8:17b8:4f7d
+                           [03]: Bluetooth Device (Personal Area Network)
+                                 Connection Name: Bluetooth Network Connection
+                                 Status:          Media disconnected
+                           [04]: Microsoft Wi-Fi Direct Virtual Adapter
+                                 Connection Name: Local Area Connection* 2
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.137.1
+                                 [02]: fe80::c595:8b59:c405:68ec
+                           [05]: VMware Virtual Ethernet Adapter for VMnet1
+                                 Connection Name: VMware Network Adapter VMnet1
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.15.1
+                                 [02]: fe80::8236:68dd:c542:51eb
+                           [06]: VMware Virtual Ethernet Adapter for VMnet8
+                                 Connection Name: VMware Network Adapter VMnet8
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.6.1
+                                 [02]: fe80::af31:2fb5:ebe9:1af5
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+
+C:\Users\tambo>^A

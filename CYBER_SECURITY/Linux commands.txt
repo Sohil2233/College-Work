@@ -1,0 +1,137 @@
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ sudo                          
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ find soul.jpeg              
+soul.jpeg
+                                                                                
+                                                                                
+┌──(rax㉿kali)-[~]
+└─$ whoami         
+rax
+                                                                                
+┌──(rax㉿kali)-[~]
+└─$ !
+                                                                                
+┌──(rax㉿kali)-[~]
+└─$ !1
+                                                                                
+                                                                                
+┌──(rax㉿kali)-[~]
+└─$ pwd
+/home/rax
+                                                                                
+┌──(rax㉿kali)-[~]
+└─$ ls  
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+                                                                                                                                           
+┌──(rax㉿kali)-[~/Downloads]
+└─$ touch siri.txt
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ vi siri.txt
+                                      
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ cat siri.txt
+kndv
+jdv
+jvd
+bhdvjlnakd
+hvbd
+vhbd
+vdkj
+vjak
+                           
+                                                                                                                                                             
+┌──(rax㉿kali)-[~/Downloads]
+└─$ echo $((5+3))         
+8
+                                                                              
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ mkdir soul
+                                                                                
+                                                                               
+┌──(rax㉿kali)-[~/Downloads]
+└─$ cp soul.jpeg soul/ 
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ mkdir rax          
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ mv soul.jpeg rax/
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ rm siri.txt    
+
+
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ rm -rf soul    
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ mkdir siri       
+ 
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ rmdir siri
+
+ 
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ stat rax.txt
+  File: rax.txt
+  Size: 14        	Blocks: 8          IO Block: 4096   regular file
+Device: 8,1	Inode: 1444809     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/     rax)   Gid: ( 1000/     rax)
+Access: 2024-06-26 18:35:54.491704489 +0530
+Modify: 2024-06-26 18:35:31.523243818 +0530
+Change: 2024-06-26 18:35:31.523243818 +0530
+ Birth: 2024-06-26 18:28:58.990930393 +0530
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ echo       
+
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ echo hello
+hello
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ echo hello > rax.txt
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ cat rax.txt 
+hello
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ echo hello            
+hello
+                                                                                
+
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ grep hello rax.txt
+hello
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ grep hello rax.txt
+hello
+hello
+                                                                                
+┌──(rax㉿kali)-[~/Downloads]
+└─$ 
+
+

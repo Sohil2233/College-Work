@@ -1,0 +1,9 @@
+which steghide
+
+sudo apt-get install steghide -y
+
+steghide --help
+
+steghide embed -ef luv.txt -cf luv.jpeg
+
+steghide extract -sf luv.jpeg
