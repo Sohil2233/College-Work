@@ -1,0 +1,23 @@
+alternate blink of lef
+https://wokwi.com/projects/433570862316210177
+
+binary counter with 2 leds
+https://wokwi.com/projects/433570486093390849
+
+binary counter with 3 leds
+https://wokwi.com/projects/433571019753622529
+
+led running light effecct with 4 led
+https://wokwi.com/projects/433571229054663681
+
+pattern generation
+https://wokwi.com/projects/433571477338621953
+
+piano effect
+https://wokwi.com/projects/312696687190606401
+
+temperature control
+https://wokwi.com/projects/433571858264306689
+
+stepper motor
+https://wokwi.com/projects/334512724199342674
